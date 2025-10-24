@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title> 𝑀𝑢𝑛𝑖𝐴</title>
+  <style>
+    :root{
+      --bg:#8e522c;
+      --card:#e1d1bc;
+      --accent:#ae6538;
+      --muted:#161e0d;
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      --maxw:720px;
+      font-family: system-ui,-apple-system,"Segoe UI","Noto Sans Arabic","Helvetica Neue",Arial;
+    }
+
+    /* light theme fallback */
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg: #f6f8fb;
+        --card:#ffffff;
+        --accent:#0b66ff;
+        --muted:#55606b;
+        --glass: rgba(0,0,0,0.03);
+      }
+    }
+
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,var(--bg),rgba(0,0,0,0.05));
+      color: #fff;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:28px 16px;
+      box-sizing:border-box;
+    }
+
+    .card{
+      width:100%;
+      max-width:var(--maxw);
+      background:linear-gradient(180deg,var(--card),rgba(255,255,255,0.01));
+      border-radius:var(--radius);
+      padding:22px;
+      box-sizing:border-box;
+      box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+      text-align:center;
+      backdrop-filter: blur(6px);
+    }
+
+    .avatar{
+      width:96px;
+      height:96px;
+      border-radius:50%;
+      margin:0 auto 12px;
+      overflow:hidden;
+      box-shadow:0 6px 18px rgba(2,6,23,0.5);
+      border:3px solid var(--glass);
+    }
+    .name{
+      font-size:18px;
+      font-weight:700;
+      margin:6px 0 2px;
+      color:#58331b;
+    }
+    .desc{
+      font-size:13px;
+      color:var(--muted);
+      margin:0 0 14px;
+    }
+
+    .links{
+      display:grid;
+      gap:12px;
+      grid-template-columns: 1fr;
+      margin-top:6px;
+    }
+
+    .link{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      padding:12px 14px;
+      border-radius:12px;
+      text-decoration:none;
+      color:inherit;
+      background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      transition: transform .12s ease, box-shadow .12s ease;
+      box-shadow: 0 2px 8px rgba(2,6,23,0.35);
+    }
+    .link:active{transform:scale(.995)}
+    .link:hover{transform:translateY(-4px); box-shadow:0 12px 30px rgba(2,6,23,0.45)}
+    .icon{
+      width:40px;
+      height:40px;
+      min-width:40px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:10px;
+      background: rgba(255,255,255,0.03);
+      flex-shrink:0;
+    }
+    .link .txt{
+      text-align:right;
+      flex:1;
+    }
+    .label{
+      display:block;
+      font-weight:600;
+      font-size:15px;
+      color: #58331b;
+    }
+    .sub{
+      display:block;
+      margin-top:2px;
+      font-size:12px;
+      color:var(--muted);
+    }
+
+    /* responsive: show two columns on wider screens */
+    @media (min-width:600px){
+      .links{ grid-template-columns: 1fr 1fr; }
+    }
+
+    /* small helper for note & footer */
+    .note{
+      margin-top:14px;
+      font-size:12px;
+      color:var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main class="card" role="main" >
+    <div class="avatar" aria-hidden="true">
+      <img src="PFPMUNIA.jpg"  style="width:100%;height:100%;object-fit:cover;">
+    </div>
+
+    <h1 class="name">𝑀𝑢𝑛𝑖𝐴</h1>
+    <p class="desc">تصاميم وتنظيم دعوات إلكترونية — تصميم من الخيال ✨</p>
+
+    <section class="links" aria-label="روابط التواصل">
+      <!-- TikTok -->
+      <a class="link" href="https://www.tiktok.com/@muni1a3?_t=ZS-90ovYp1W2Df&_r=1" target="_blank" rel="noopener noreferrer">
+        <span class="icon" aria-hidden="true">
+          <!-- TikTok simple SVG -->
+          <svg width="22" height="22" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M31 10v12.5a6.5 6.5 0 1 1-6.5-6.5V13.5a10 10 0 1 0 10 10V10h-3z" fill="#fff"/>
+          </svg>
+        </span>
+        <span class="txt">
+          <span class="label">TikTok</span>
+          <span class="sub">تابع فيديوهاتنا القصيرة</span>
+        </span>
+      </a>
+
+      <a class="link" href="https://www.instagram.com/unix3m?igsh=MTdmNDh1eHh0ZmU5cw%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+        <span class="icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.4"/>
+            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.4"/>
+            <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="txt">
+          <span class="label"> Instagram</span>
+          <span class="sub">نماذج أعمال وصور تفصيلية</span>
+        </span>
+      </a>
+
+      <a class="link" href="https://iwtsp.com/966505766424" target="_blank" rel="noopener noreferrer">
+        <span class="icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M20.5 3.5L3.5 20.5V24l3.5-1 14.5-14.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="txt">
+          <span class="label">WhatsApp</span>
+          <span class="sub">اكتب رسالة لطلب تصميم أو استفسار</span>
+        </span>
+      </a>
+
+    </section>
+
+  </main>
+</body>
+</html>
